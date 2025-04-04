@@ -1,0 +1,132 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Resume Panel (Top) */
+#rez-panel {
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+#rez-panel ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+#rez-panel li {
+  cursor: pointer;
+  padding: 5px 10px;
+  background-color: #e2e2e2;
+  border-radius: 4px;
+}
+
+/* Main Container */
+.container {
+  display: flex;
+  height: calc(100vh - 60px); /* Adjust height based on header size */
+  justify-content: center;
+}
+
+/* Positioning for the Job Search Panel */
+#job-panel {
+  padding: 15px;
+  border-right: 1px solid #ccc;
+  overflow-y: auto;
+  width: 180px; /* Adjust to fit the content */
+  background-color: #fafafa;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in; /* Smooth transition */
+  z-index: 1000; /* Above other content */
+}
+.side{
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 60px); /* Adjust height based on header size */
+  position: fixed;
+  top:50px;
+}
+.left{
+  left: 0;
+}
+.right{
+  right: 0;
+}
+#job-panel ul {
+  list-style: none;
+  padding: 0;
+}
+#job-panel li {
+  cursor: pointer;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+/* Collapsed States */
+.collapsed {
+  transition: transform 0.3s ease-out;
+}
+.panel.right{
+  transform-origin: right center; /* Pivot point */
+}
+.panel.left{
+  transform-origin: left center; /* Pivot point */
+}
+.right.collapsed {
+  transform: perspective(100rem) rotateY(-75deg);
+}
+.left.collapsed {
+  transform: perspective(100rem) rotateY(75deg);
+}
+.panel:hover {
+    box-shadow: 4px 0 12px rgba(0, 0, 0, 0.15);
+}
+.hid {
+  display:none;
+}
+/* Main Area (Center) */
+#main-area {
+  padding: 20px;
+  overflow-y: auto;
+}
+#main-area textarea{
+  height:400px;
+  width:350px;
+}
+/* Cover Letter Panel (Right) */
+#cov-panel {
+  right:0px;
+  width: 25%;
+  padding: 15px;
+  border-left: 1px solid #ccc;
+  background-color: #fafafa;
+  transition: transform 0.3s ease-in; /* Smooth transition */
+}
+#cov-panel textarea {
+  flex: 1;
+  resize: vertical;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+#cov-panel .actions button {
+  margin-top: 5px;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  background-color: #007acc;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#cov-panel .actions button:hover {
+  background-color: #005fa3;
+}

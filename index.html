@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job & Resume Manager</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Top Panel: Resumes -->
+  <header id="rez-panel" class="panel">
+    <ul>
+      <li data-resume-id="1">Resume A<span class="match"></span></li>
+      <li data-resume-id="2">Resume B<span class="match"></span></li>
+      <li data-resume-id="3">Resume C<span class="match"></span></li>
+    </ul>
+  </header>
+
+  <!-- Main container -->
+  <section class="container">
+    <!-- Left/Job Panel -->
+    <aside id="job-panel" class="panel side left">
+      <button class="toggle-button0">Toggle Panel</button>
+      <h2>Job Listings</h2>
+      <ul>
+        <li data-job-id="101">
+          <h3>Job Title 1</h3>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </li>
+        <li data-job-id="102">
+          <h3>Job Title 2</h3>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </li>
+        <!-- More jobs... -->
+      </ul>
+    </aside>
+
+    <!-- Center/Main Area -->
+    <main id="main-area">
+      <!-- Dynamic content: job details or resume editor -->
+      <section id="job-details" class="hid">
+        <!-- Loaded job data appears here -->
+      </section>
+      <section id="resume-editor">
+        <h3 style="width:100%;text-align:center;">Resume A</h3>
+        <textarea></textarea>
+      </section>
+      <section id="ai-suggestions" class="hid">
+        <!-- AI resume improvement suggestions -->
+      </section>
+    </main>
+
+    <!-- Right Panel: Cover Letter & Application Actions -->
+    <aside id="cov-panel" class="panel side right">
+      <button class="toggle-button2">Toggle Panel</button>
+      <h2>Cover Letter</h2>
+      <textarea placeholder="Start writing your cover letter..."></textarea>
+      <div class="actions">
+        <button id="update-resume">Change Resume</button>
+        <button id="submit-application">Submit Application</button>
+      </div>
+    </aside>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>

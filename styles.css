@@ -7,12 +7,24 @@ body, html {
   padding: 0;
   font-family: Arial, sans-serif;
 }
+h3{
+  text-align:center;
+}
+button.disable{
+  background-color: #cccccc !important;
+  cursor:no-drop !important;
+}
+li.active{
+  border: 2px solid green !important;
+  border-radius: 4px !important;
+}
 
 /* Resume Panel (Top) */
 #rez-panel {
   background-color: #f4f4f4;
   padding: 10px;
   border-bottom: 1px solid #ccc;
+  height:50px;
 }
 #rez-panel ul {
   list-style: none;

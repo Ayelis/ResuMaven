@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Job & Resume Manager</title>
+  <title>ResuMaven - Job & Resume Manager</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <!-- Top Panel: Resumes -->
   <header id="rez-panel" class="panel">
     <ul>
-      <li data-resume-id="1">Resume A<span class="match"></span></li>
+      <li data-resume-id="1" class="active">Resume A<span class="match"></span></li>
       <li data-resume-id="2">Resume B<span class="match"></span></li>
       <li data-resume-id="3">Resume C<span class="match"></span></li>
     </ul>
@@ -42,8 +42,8 @@
         <!-- Loaded job data appears here -->
       </section>
       <section id="resume-editor">
-        <h3 style="width:100%;text-align:center;">Resume A</h3>
-        <textarea></textarea>
+        <h3 id="MainTitle">Resume A</h3>
+        <textarea>Resume Content loaded here...</textarea>
       </section>
       <section id="ai-suggestions" class="hid">
         <!-- AI resume improvement suggestions -->
@@ -52,12 +52,13 @@
 
     <!-- Right Panel: Cover Letter & Application Actions -->
     <aside id="cov-panel" class="panel side right">
-      <button class="toggle-button2">Toggle Panel</button>
+      <button class="toggle-button1">Toggle Panel</button>
       <h2>Cover Letter</h2>
-      <textarea placeholder="Start writing your cover letter..."></textarea>
+      <textarea placeholder="Start writing your cover letter or generate one..."></textarea>
       <div class="actions">
-        <button id="update-resume">Change Resume</button>
-        <button id="submit-application">Submit Application</button>
+        <button id="update-cover">Generate Cover Letter</button>
+        <button id="update-resume">Select Resume</button>
+        <button id="submit-application" class="disable">Submit Application</button>
       </div>
     </aside>
   </section>

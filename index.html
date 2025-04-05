@@ -10,7 +10,7 @@
   <!-- Top Panel: Resumes -->
   <header id="rez-panel" class="panel">
     <ul>
-      <li data-resume-id="1" class="active">Resume A<span class="match"></span></li>
+      <li data-resume-id="1">Resume A<span class="match"></span></li>
       <li data-resume-id="2">Resume B<span class="match"></span></li>
       <li data-resume-id="3">Resume C<span class="match"></span></li>
     </ul>
@@ -37,12 +37,23 @@
 
     <!-- Center/Main Area -->
     <main id="main-area">
+      <section id="definition">
+        <dl>
+          <dt>ma‧ven /ˈmeɪvən/ noun</dt>
+          <dd>1. an expert on a subject</dd>
+        </dl>
+        <small>&mdash; Cambridge Business English Dictionary © Cambridge University Press</small>
+        <br /><br />
+        To get started, choose a job or resume...
+      </section>
+
       <!-- Dynamic content: job details or resume editor -->
       <section id="job-details" class="hid">
-        <!-- Loaded job data appears here -->
+        <h3 class="MainTitle"></h3>
+        <textarea></textarea>
       </section>
-      <section id="resume-editor">
-        <h3 id="MainTitle">Resume A</h3>
+      <section id="resume-editor" class="hid">
+        <h3 class="MainTitle">Resume A</h3>
         <textarea>Resume Content loaded here...</textarea>
       </section>
       <section id="ai-suggestions" class="hid">
